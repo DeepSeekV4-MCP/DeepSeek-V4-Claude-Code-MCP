@@ -2,7 +2,7 @@
  
 **The free, open-source MCP server that pairs DeepSeek V4 with Claude Code, Cursor, and OpenAI Codex — slashing their token bills by 10–100× while letting you chat with your entire codebase locally.** Point DV4-MCP at your project folder. DeepSeek V4's 1-million-token context reads the whole repo in one shot — no RAG chunking, no vector embeddings, no missed cross-file links. Then your existing AI coding agent stops re-reading files every session and asks DV4-MCP for surgical context packets instead. The same Claude Code session that used to burn 120,000 tokens now burns 10,000. Your code never leaves your machine. One-click installer for Windows and Mac, no Python, no Docker, no account.
  
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-blue?style=flat-square)](https://github.com/<your-org>/deepseek-v4-claude-code-mcp/releases/latest)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-blue?style=flat-square)](https://github.com/DeepSeekV4-MCP/deepseek-v4-claude-code-mcp/releases/latest)
 [![macOS](https://img.shields.io/badge/macOS-12.0+-blue?style=flat-square)](https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code/releases/latest)
 [![DeepSeek V4](https://img.shields.io/badge/Powered%20by-DeepSeek%20V4-purple?style=flat-square)](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)
 [![Claude Code MCP](https://img.shields.io/badge/Claude%20Code-MCP-orange?style=flat-square)](https://www.claude.com/product/claude-code)
