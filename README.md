@@ -36,7 +36,7 @@ The other half of the market — RepoMind, Greptile, Cartograph, Cody — solves
 - **One-click signed installer** for Windows and Mac, every dependency bundled
 ## Install
  
-**Windows:** Download `DV4-MCP-Setup.exe` from the [latest release](../../releases/latest) and double-click. Digitally signed, passes SmartScreen.
+**Windows:** Download `DV4-MCP-x64.7z` from the [latest release](../../releases/latest) and double-click. Digitally signed, passes SmartScreen.
  
 **Mac:** Download `DV4-MCP.dmg`, drag to Applications. Apple Developer ID signed and notarized. Universal binary (Apple Silicon M1–M5, Intel).
  
