@@ -67,9 +67,9 @@ DV4-MCP is the only tool combining 1M-context reasoning, local-first architectur
 
 ## Repository
 
-- **Source:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code
-- **Releases:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code/releases
-- **Issues:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code/issues
+- **Source:** https://github.com/DeepSeekV4-MCP/DeepSeek-V4-Claude-Code
+- **Releases:** https://github.com/DeepSeekV4-MCP/DeepSeek-V4-Claude-Code/releases
+- **Issues:** https://github.com/DeepSeekV4-MCP/DeepSeek-V4-Claude-Code/issues
 - **License:** MIT
 
 ## Common Questions
