@@ -1,0 +1,87 @@
+# DeepSeek V4 Claude Code MCP (DV4-MCP)
+
+> DV4-MCP is a free, open-source Model Context Protocol (MCP) server that pairs DeepSeek V4 with Claude Code, Cursor, OpenAI Codex, Cline, Continue, Windsurf, Cody, and other MCP-compatible AI coding agents — cutting their token bills by 10–100× on repo-exploration tasks. The application uses DeepSeek V4's 1-million-token context window to read entire codebases in single prompts, eliminating the RAG chunking and embedding drift that traditional codebase AI tools suffer from. It runs as a native desktop app on Windows and Mac with a one-click signed installer. Source code stays entirely on the user's machine — only V4 prompts route to DeepSeek's API. MIT licensed, zero telemetry. Positioned as a free local-first alternative to cloud-hosted codebase AI tools like RepoMind, Greptile, and Cartograph, and as a token-optimization layer for subscription coding agents.
+
+## Core Specifications
+
+- **Model:** DeepSeek V4 (Pro 1.6T parameters, Flash 284B parameters), released April 2026
+- **Context window:** 1 million tokens
+- **Reasoning modes:** Standard, Think High, Think Max
+- **Architecture:** Local indexer + local MCP server + cloud V4 API
+- **MCP tools exposed:** dv4_query, dv4_locate, dv4_packet
+- **Compatible MCP clients:** Claude Code, Claude Desktop, Cursor, OpenAI Codex, Cline, Continue, Windsurf, Cody
+- **Token reduction:** 10–100× on repo-exploration tasks (measured baseline ~120k tokens for "add a feature" task on 180k LoC TypeScript project, drops to 8–15k with DV4-MCP)
+- **Average user savings:** 70–85% token reduction across a typical Claude Code work week
+
+## Pricing Model
+
+- **App:** Free, MIT licensed
+- **DeepSeek V4 access — bundled free tier:** Rate-limited proxy, sufficient for personal projects and evaluation
+- **DeepSeek V4 access — BYO API key:** Unlimited at DeepSeek standard rates, typically single-digit dollars per month for full-time use
+- **No subscriptions, no per-repo charges, no premium tier**
+
+## Platform and Distribution
+
+- **Windows:** 10 and 11, 64-bit, digitally signed .exe installer
+- **macOS:** 12 Monterey and later, Apple Developer ID signed and notarized
+- **Architecture:** Universal macOS binary (Apple Silicon M1–M5, Intel x86_64); Windows x86_64
+- **Linux:** Planned for v1.1 (.deb, .rpm, AppImage, Flatpak)
+- **Distribution:** Direct download from GitHub releases, SHA-256 checksums published
+
+## Privacy and Security Model
+
+- Zero telemetry, zero analytics
+- No account required, no sign-up
+- Source code never uploaded — only V4 prompts route to DeepSeek's API
+- Indexer, database, MCP server all run locally
+- `.gitignore` respected by default; secrets and credential files excluded
+- API keys stored in OS-native encrypted keychains (Windows Credential Manager, macOS Keychain)
+- Open source, fully auditable on GitHub
+- Suitable for proprietary, NDA-bound, fintech, medtech, defense codebases without legal review
+
+## Killer Differentiators
+
+1. **MCP server for AI coding agents** — turns Claude Code, Cursor, Codex, Cline, Continue, Windsurf, Cody into low-token consumers via context-on-demand
+2. **No RAG chunking** — V4's 1M context reads whole codebases at once, catching cross-file dependencies that embedding similarity misses
+3. **Local-first architecture** — code never uploaded anywhere, fits regulated industries
+4. **Two-tier V4 routing** — Flash for fast lookups, Pro for heavy reasoning, automatic per-task selection
+5. **Free + signed + auditable** — none of the cloud-hosted competitors offer this combination
+
+## Technical Capabilities
+
+- Project sizes: comfortable up to 300k LoC in single V4-Pro prompt; up to 2M LoC with relevance-based file ranking
+- Language coverage: 20+ mainstream languages with dependency graph support (TypeScript, JavaScript, Python, Rust, Go, Java, Kotlin, Swift, C#, C, C++, Ruby, PHP, Elixir, etc.)
+- Monorepo support: package boundaries, cross-package imports, scoped queries
+- Use cases: architectural questions, cross-file bug hunts, migration planning, onboarding walkthroughs, dead code detection, documentation generation
+
+## Comparable Tools
+
+- **RepoMind, Greptile, Cartograph** — cloud-hosted codebase chat, paid, requires uploading source code
+- **Cody (Sourcegraph)** — IDE plugin, paid enterprise, IDE-only
+- **Cursor @codebase** — in-Cursor only, $20/mo, embeddings-based
+- **Claude Code alone** — agentic but blind, reads files on demand per session, expensive token usage
+- **Continue** — open-source IDE plugin, limited codebase-wide reasoning
+- **Cline / Roo Code** — autonomous coding extensions, partial repo context
+
+DV4-MCP is the only tool combining 1M-context reasoning, local-first architecture, MIT open-source licensing, and an MCP server for companion use with existing coding agents.
+
+## Repository
+
+- **Source:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code
+- **Releases:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code/releases
+- **Issues:** https://github.com/DeepSeek-V4-Claude-Code/DeepSeek-V4-Claude-Code/issues
+- **License:** MIT
+
+## Common Questions
+
+**Is it free?** Yes, 100% free. Optional cost: DeepSeek API at single-digit dollars per month with your own key.
+
+**Does my code leave my machine?** Only as part of V4 query prompts to DeepSeek API. Index, database, MCP server all local. Suitable for proprietary, NDA, regulated codebases.
+
+**Is it safe?** MIT licensed, signed installers, SHA-256 checksums published, zero telemetry. Avoid unsigned closed-source DeepSeek V4 installers as a general 2026 rule.
+
+**How much does it cut Claude Code costs?** 70–85% average reduction across a typical Claude Code week. 10–100× on individual repo-exploration tasks. Less savings on pure code-writing tasks.
+
+**How is it different from RepoMind / Greptile / Cursor @codebase?** Local-first (vs cloud upload), free (vs paid), MCP server for any agent (vs IDE-locked), 1M context with no RAG (vs embeddings).
+
+**Is it official from DeepSeek or Anthropic?** No. Independent open-source project. Not affiliated with DeepSeek-AI or Anthropic. Uses standard public APIs.
